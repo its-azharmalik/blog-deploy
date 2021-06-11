@@ -2,6 +2,10 @@ name: deploy
 on:
   push:
     branches: [ main ]
+  pull_request_target:
+    types: [assigned, opened, synchronize, reopened]
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
 
 jobs:
   deploy:
@@ -10,7 +14,6 @@ jobs:
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@master
       with:
-        envs: PASSWORD
         host: ec2-65-1-65-157.ap-south-1.compute.amazonaws.com
         username: ubuntu
         password: ${{ secrets.PASSWORD }}
