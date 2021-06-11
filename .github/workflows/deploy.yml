@@ -13,4 +13,6 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ubuntu
         password: ${{ secrets.PASSWORD }}
-        script: whoami
+        script: |
+          cd blog-deploy
+          
