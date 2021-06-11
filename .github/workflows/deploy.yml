@@ -1,4 +1,4 @@
-name: hello-world
+name: deploy
 
 on:
   push:
@@ -8,5 +8,10 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v0.1.4
+      with:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        script: whoami
