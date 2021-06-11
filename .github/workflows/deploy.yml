@@ -10,7 +10,7 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        host: ec2-65-1-65-157.ap-south-1.compute.amazonaws.com
+        username: ubuntu
+        password: Azhar.258
         script: whoami
