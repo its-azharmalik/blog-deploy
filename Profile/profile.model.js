@@ -1,0 +1,1 @@
+// its same as User Model in auth folder . 
