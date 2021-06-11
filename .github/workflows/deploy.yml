@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: SSH Remote Commands
-      uses: appleboy/ssh-action@v0.1.4
-      with:
+      uses: appleboy/scp-action@master
+      env:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        proxy_port: 80
+        key: ${{ secrets.KEY }}
+      with:
         script: whoami
