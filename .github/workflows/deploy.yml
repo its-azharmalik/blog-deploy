@@ -10,8 +10,9 @@ jobs:
     steps:
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v0.1.4
-      env:
+      with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
+        port: 80
         script: whoami
