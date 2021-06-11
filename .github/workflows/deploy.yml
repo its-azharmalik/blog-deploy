@@ -1,5 +1,4 @@
 name: deploy
-
 on:
   push:
     branches: [ main ]
@@ -8,7 +7,7 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-    - name: SSH Remote Commands
+    - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
