@@ -15,7 +15,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           cd blog-deploy/ &&
-          pm2 kill &&
           git pull &&
           git fetch &&
           npm i &&
