@@ -17,5 +17,5 @@ jobs:
           cd blog-deploy/ &&
           git pull &&
           git fetch &&
-          npm i &&
+          npm i
           pm2 start app.js
