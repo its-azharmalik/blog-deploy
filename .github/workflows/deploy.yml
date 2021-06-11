@@ -11,5 +11,6 @@ jobs:
       uses: appleboy/ssh-action@v0.1.4
       with:
         host: ec2-65-1-65-157.ap-south-1.compute.amazonaws.com
-        username: ${{ secrets.USERNAME }}
-        password: Azhar.258
+        username: ubuntu
+        password: ${{ secrets.INPUT_PASSWORD }}
+        script: whoami
