@@ -13,5 +13,5 @@ jobs:
         envs: env
         host: ec2-65-1-65-157.ap-south-1.compute.amazonaws.com
         username: ubuntu
-        PASSWORD: ${{ secrets.PASSWORD }}
+        password: ${{ secrets.PASSWORD }}
         script: whoami
