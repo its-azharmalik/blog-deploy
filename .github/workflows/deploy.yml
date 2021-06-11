@@ -10,7 +10,7 @@ jobs:
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v0.1.4
       with:
-        envs: env
+        envs: PASSWORD
         host: ec2-65-1-65-157.ap-south-1.compute.amazonaws.com
         username: ubuntu
         password: ${{ secrets.PASSWORD }}
