@@ -16,6 +16,7 @@ jobs:
       env: 
         PASSWORD: ${{ github.PASSWORD }}
       with:
+        envs: PASSWORD
         host: ec2-65-1-65-157.ap-south-1.compute.amazonaws.com
         username: ubuntu
         password: PASSWORD
