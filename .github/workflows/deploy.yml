@@ -14,5 +14,9 @@ jobs:
         username: ubuntu
         password: ${{ secrets.PASSWORD }}
         script: |
-          cd blog-deploy
-          
+          cd blog-deploy/ &&
+          pm2 kill &&
+          git pull &&
+          git fetch &&
+          npm i &&
+          pm2 start app.js
